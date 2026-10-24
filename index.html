@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ashish Mehta · Research Engineer, Medical AI</title>
-<meta name="description" content="Ashish Mehta, Research Engineer at MBZUAI working on medical AI: vision-language models for CT and MR, grounded segmentation, clinical agents and efficient models. IIT Madras.">
+<meta name="description" content="Ashish Mehta, Research Engineer at MBZUAI working on medical vision-language models: large-scale pre-training, SFT and RL on CT and MR. Previously IIT Madras: process-safety AI and ML systems deployment.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -36,7 +36,7 @@
       <div>
         <div class="eyebrow">Research Engineer &middot; Medical AI &middot; MBZUAI</div>
         <h1>Ashish Mehta<span class="cursor" aria-hidden="true"></span></h1>
-        <p class="lead">I build medical AI that can be checked: vision-language models for CT and MR, grounded segmentation, and clinical agents, evaluated carefully enough to be trusted around real patients.</p>
+        <p class="lead">I train and adapt vision-language models for medicine: data, architecture, pre-training, SFT and reinforcement learning on large GPU clusters, with evaluation rigorous enough to be trusted around real patients.</p>
         <div class="btns">
           <a class="btn primary" href="#projects">See my work</a>
           <a class="btn" href="https://github.com/mehtashish778" rel="noopener">GitHub</a>
@@ -51,14 +51,13 @@
   <section class="win" id="about" aria-labelledby="about-title">
     <div class="titlebar"><span class="box"></span><span class="stripes"></span><h2 id="about-title">About</h2><span class="stripes"></span></div>
     <div class="body">
-      <p>I am a Research Engineer at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), working on medical AI. My research centres on vision-language models for 3D CT and MR: models that classify, write reports, answer questions, ground findings and segment, together with the evaluation needed to show they are reliable.</p>
-      <p>Alongside that, I work on parameter-efficient adaptation of frozen medical models, learning from radiology reports instead of dense annotations, ontology-guided clinical agents, and efficient inference for clinical language models. Most of this work is in progress or under review, so I describe it here by topic.</p>
-      <p>Before MBZUAI I worked at the iACE Lab, IIT Madras, on the iSafe process-safety platform (P&amp;ID digitisation, knowledge graphs and agentic hazard analysis), and consulted on a production AI film pipeline on AWS. I like deterministic orchestration around models, explicit cost guardrails and measurable evaluation, whatever the domain.</p>
+      <p>I am a Research Engineer at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), working on medical vision-language models (VLMs). My work spans the whole training stack: data acquisition and preparation, architecture-level changes, pre-training, supervised fine-tuning (SFT) and RL-based fine-tuning, run on large multi-node GPU clusters.</p>
+      <p>My earlier work at IIT Madras was in industrial AI and safety-critical systems: digitising process diagrams and automating hazard studies for chemical plants, and building and deploying ML software into an air-gapped industrial R&amp;D environment. I care about systems that are reproducible, deployable and measurable, whatever the domain.</p>
       <div class="stats">
-        <div class="stat"><b>7</b><span>active medical-AI research threads</span></div>
+        <div class="stat"><b>VLM</b><span>pre-training, SFT and RL for medical imaging</span></div>
         <div class="stat"><b>3D</b><span>CT and MR vision-language focus</span></div>
+        <div class="stat"><b>HPC</b><span>large-scale multi-node cluster training</span></div>
         <div class="stat"><b>#13</b><span>Kaggle Uyghur Voice Cup, silver</span></div>
-        <div class="stat"><b>40%</b><span>faster production timeline, NextBerry Film Studio</span></div>
       </div>
     </div>
   </section>
@@ -70,22 +69,20 @@
         <div class="panel">
           <h3>Working on now</h3>
           <ul>
-            <li><strong>One model for CT and MR:</strong> classification, report writing, VQA, 3D grounding and promptable segmentation in a single set of weights, without losing segmentation quality.</li>
-            <li><strong>Learning from reports:</strong> lesion segmentation trained from radiology reports instead of dense masks.</li>
-            <li><strong>Efficient adaptation:</strong> compact concept and evidence adapters as an alternative to QLoRA on frozen medical VLMs.</li>
-            <li><strong>Verified grounded dialogue</strong> about medical images, with every answer checkable against the image.</li>
-            <li><strong>Clinical agents:</strong> ontology-guided patient intake that asks only what the record does not yet know, and real-time voice agents with event-aware noise isolation.</li>
-            <li><strong>Efficient clinical LLMs:</strong> transferring KV caches between models while preserving critical clinical facts.</li>
+            <li><strong>Medical VLMs:</strong> pre-training and SFT on large-scale medical data, including 3D CT and MR.</li>
+            <li><strong>RL fine-tuning:</strong> reinforcement learning with verifiable rewards for grounding and segmentation.</li>
+            <li><strong>Data engines:</strong> acquisition, curation and preparation of large training corpora.</li>
+            <li><strong>Architecture:</strong> changes to model components, and parameter-efficient alternatives to full fine-tuning.</li>
+            <li><strong>Evaluation:</strong> patient-level splits, leakage control and clear limits on clinical claims.</li>
           </ul>
         </div>
         <div class="panel">
           <h3>Where I am heading</h3>
           <ul>
-            <li>Medical foundation models for 3D imaging that reason, ground and segment, trained with reinforcement learning on verifiable rewards.</li>
-            <li>Rigorous, leakage-controlled evaluation: patient-level splits, bootstrapped confidence, clear limits on clinical claims.</li>
+            <li>Medical foundation models for 3D imaging that reason, ground and segment.</li>
             <li>Cheaper, smaller and safer adaptation of large models for hospitals and low-resource settings.</li>
-            <li>Agents that are auditable in clinical workflows, with privacy and infrastructure built in.</li>
-            <li>Publishing the research, and shipping the engineering behind it.</li>
+            <li>Auditable clinical agents with privacy and infrastructure built in.</li>
+            <li>Publishing the research and shipping the engineering behind it.</li>
           </ul>
         </div>
       </div>
@@ -101,11 +98,9 @@
           <h3>Research Engineer <span class="badge">current</span></h3>
           <div class="org">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</div>
           <ul>
-            <li>Research on 3D medical vision-language models for CT and MR: reports, VQA, grounding and segmentation from one model.</li>
-            <li>Parameter-efficient adapters for frozen medical VLMs, and weakly supervised lesion segmentation from radiology reports.</li>
-            <li>Ontology-guided clinical agents, real-time medical voice pipelines and efficient clinical LLM inference.</li>
-            <li>Ran large experiment campaigns on a Slurm GPU cluster, with reproducible pipelines from results to paper figures.</li>
-            <li>Also benchmarked AVTR-1 avatar integrations across multiple RAG frameworks.</li>
+            <li>Pre-training, SFT and RL fine-tuning of medical vision-language models on large-scale GPU clusters.</li>
+            <li>End-to-end ownership of training data: acquisition, preparation and quality control.</li>
+            <li>Architecture-level modifications, plus reproducible pipelines from experiments to paper figures.</li>
           </ul>
         </li>
         <li>
@@ -114,7 +109,6 @@
           <div class="org">NextBerry Labs</div>
           <ul>
             <li>Built NextBerry Film Studio on AWS: a 12-stage deterministic AI orchestration pipeline that reduced production timeline by 40%.</li>
-            <li>Implemented model routing (Veo 3.1, Sora 2 Pro), role-based QA evaluation and shot-level scoped regeneration.</li>
           </ul>
         </li>
         <li>
@@ -122,7 +116,9 @@
           <h3>Project Engineer</h3>
           <div class="org">iACE Lab, IIT Madras</div>
           <ul>
-            <li>Worked on the iSafe process-safety platform: P&amp;ID digitisation, knowledge-graph pipelines and agentic AI workflows.</li>
+            <li>Led work on P&amp;ID digitisation: converting process and instrumentation diagrams into structured, machine-readable plant data.</li>
+            <li>Built automated Hazard and Operability (HAZOP) study tooling for chemical plants on top of that data.</li>
+            <li>Internal project; no public link.</li>
           </ul>
         </li>
         <li>
@@ -130,7 +126,8 @@
           <h3>Research &amp; Development Intern</h3>
           <div class="org">iACE Lab, IIT Madras</div>
           <ul>
-            <li>HPCL predictive maintenance, Walmart ChemSafe, and AI for chemical process safety.</li>
+            <li><strong>HPCL predictive maintenance:</strong> built the full software ecosystem around an ML model: backend, front end and tooling for easy training and fine-tuning. Deployed it in an isolated environment at the HPCL R&amp;D campus, Bengaluru.</li>
+            <li><strong><a href="https://www.chemsafe.co.in/" rel="noopener">ChemSafe</a>:</strong> contributed to a chemical-safety platform for SMEs, usable by audiences from expert engineers to workers with limited literacy.</li>
           </ul>
         </li>
       </ol>
@@ -146,91 +143,57 @@
       <div class="cards">
         <article class="card">
           <h3>Unified 3D CT &amp; MR model</h3>
-          <p>One open model that classifies, writes reports, answers questions, grounds findings with 3D boxes and segments from points, boxes or text, trained with reinforcement learning on a Dice-based reward.</p>
-          <ul class="tags small"><li>3D VLM</li><li>Segmentation</li><li>RL</li></ul>
+          <p>One open model that classifies, writes reports, answers questions, grounds findings and segments, trained with SFT and reinforcement learning on a Dice-based reward.</p>
+          <ul class="tags small"><li>3D VLM</li><li>SFT</li><li>RL</li></ul>
         </article>
         <article class="card">
           <h3>Lesion segmentation from reports</h3>
-          <p>Learning to segment lesions from radiology reports rather than dense masks, by explaining away what is normal.</p>
+          <p>Learning to segment lesions from radiology reports rather than dense masks.</p>
           <ul class="tags small"><li>Weak supervision</li><li>Radiology reports</li></ul>
         </article>
         <article class="card">
-          <h3>Concept adapters for medical VLMs</h3>
-          <p>Compact concept and evidence adapters on frozen vision-language models, compared against QLoRA across VQA, captioning and report generation, with cross-dataset tests.</p>
+          <h3>Efficient adaptation of medical VLMs</h3>
+          <p>Compact adapters on frozen vision-language models, compared against QLoRA on VQA, captioning and report generation, with cross-dataset tests.</p>
           <ul class="tags small"><li>PEFT</li><li>VQA</li><li>Report generation</li></ul>
         </article>
         <article class="card">
           <h3>Verified grounded dialogue</h3>
           <p>A data engine and benchmark for multi-turn dialogue about medical images, where each answer is grounded and automatically verified.</p>
-          <ul class="tags small"><li>Grounding</li><li>Benchmark</li><li>Scene graphs</li></ul>
+          <ul class="tags small"><li>Grounding</li><li>Benchmark</li></ul>
         </article>
         <article class="card">
-          <h3>Ontology-guided patient intake</h3>
-          <p>Question-selection policies that ask only what the record does not already know, tested with a simulated patient and safety-aware metrics.</p>
-          <ul class="tags small"><li>Clinical agents</li><li>Ontologies</li><li>Simulation</li></ul>
-        </article>
-        <article class="card">
-          <h3>Real-time medical voice agents</h3>
-          <p>Event-aware voice pipelines with WebRTC and a voice-isolation front end, comparing speech-to-speech and cascaded designs under noise.</p>
-          <ul class="tags small"><li>Voice</li><li>WebRTC</li><li>Noise isolation</li></ul>
-        </article>
-        <article class="card">
-          <h3>Clinical KV-cache transfer</h3>
-          <p>Moving KV caches between language models with fact-preserving capsules, so critical clinical details survive the transfer at lower latency.</p>
-          <ul class="tags small"><li>LLM efficiency</li><li>Clinical text</li></ul>
-        </article>
-        <article class="card">
-          <h3>Research infrastructure</h3>
-          <p>Notes on how CT foundation-model papers are evaluated, and a knowledge graph linking papers, datasets and our projects.</p>
-          <ul class="tags small"><li>Evaluation</li><li>Knowledge graph</li></ul>
+          <h3>Clinical agents</h3>
+          <p>Ontology-guided patient intake that asks only what the record does not yet know, and real-time voice pipelines evaluated under noise.</p>
+          <ul class="tags small"><li>Agents</li><li>Voice</li></ul>
         </article>
         <article class="card">
           <h3><a href="https://github.com/mehtashish778/avtr_rag" rel="noopener">avtr_rag</a></h3>
-          <p>Public: AVATAR project POC at MBZUAI comparing three AVTR-1 integrations across RAG frameworks.</p>
-          <ul class="tags small"><li>RAG</li><li>LightRAG</li><li>txtai</li><li>RAGFlow</li></ul>
+          <p>Public: proof of concept at MBZUAI comparing three AVTR-1 avatar integrations across RAG frameworks.</p>
+          <ul class="tags small"><li>RAG</li><li>LightRAG</li><li>RAGFlow</li></ul>
         </article>
       </div>
 
-      <h3 class="group">Earlier research &amp; applied AI</h3>
+      <h3 class="group">Industrial &amp; safety-critical AI &middot; IIT Madras</h3>
       <div class="cards">
+        <article class="card">
+          <h3>P&amp;ID digitisation &amp; automated HAZOP</h3>
+          <p>Internal project. Digitises process and instrumentation diagrams and automates Hazard and Operability studies for chemical plants. A public proof of concept for tag extraction is on GitHub.</p>
+          <ul class="tags small"><li>P&amp;ID</li><li>Agents</li><li>Process safety</li></ul>
+        </article>
+        <article class="card">
+          <h3>HPCL predictive-maintenance platform</h3>
+          <p>Backend, front end and fine-tuning tooling around a predictive-maintenance model, deployed into HPCL's isolated R&amp;D environment in Bengaluru.</p>
+          <ul class="tags small"><li>MLOps</li><li>Air-gapped deployment</li><li>Full-stack</li></ul>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.chemsafe.co.in/" rel="noopener">ChemSafe</a></h3>
+          <p>A chemical-safety platform for SMEs covering handling, transport and storage guidance, designed for readers from expert engineers to workers with limited literacy.</p>
+          <ul class="tags small"><li>Chemical safety</li><li>Accessible design</li></ul>
+        </article>
         <article class="card">
           <h3><a href="https://github.com/mehtashish778/text_grounding_poc" rel="noopener">text_grounding_poc</a></h3>
           <p>Extracts engineering tags with bounding boxes from P&amp;ID documents; compares OCR-only, VLM-only and hybrid pipelines.</p>
-          <ul class="tags small"><li>PaddleOCR</li><li>Florence-2</li><li>P&amp;ID</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/gnn-adapter-vlm" rel="noopener">gnn-adapter-vlm</a></h3>
-          <p>VLM to adapters to GNN pipeline for chest X-ray classification on CheXpert, with a Gradio inference app.</p>
-          <ul class="tags small"><li>VLM</li><li>GNN</li><li>PyTorch</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/GraphAttributeLearning" rel="noopener">GraphAttributeLearning</a></h3>
-          <p>Adjective-aware object embeddings combining CLIP and DINOv2 features with graph reasoning over object-attribute graphs.</p>
-          <ul class="tags small"><li>CLIP</li><li>DINOv2</li><li>Gradio</li></ul>
-        </article>
-      </div>
-
-      <h3 class="group">Earlier: industry &amp; safety-critical AI</h3>
-      <div class="cards">
-        <article class="card">
-          <h3>MirAi &ndash; HAZOP Agent</h3>
-          <p>An agentic system that assists Hazard and Operability studies by reasoning over process documentation.</p>
-          <ul class="tags small"><li>Agents</li><li>Process safety</li></ul>
-        </article>
-        <article class="card">
-          <h3>DeepScout</h3>
-          <p>A research-agent workflow built on LangGraph with explicit cost guardrails to bound token and tool spend.</p>
-          <ul class="tags small"><li>LangGraph</li><li>Cost control</li></ul>
-        </article>
-        <article class="card">
-          <h3>Echo State Network Forecasting</h3>
-          <p>Reservoir-computing models for financial time series, reaching 68.7% directional accuracy.</p>
-          <ul class="tags small"><li>Time series</li><li>Reservoir computing</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/chemsafe_chatbot" rel="noopener">chemsafe_chatbot</a></h3>
-          <p>Chatbot work for chemical-safety information, from the Walmart ChemSafe effort.</p>
-          <ul class="tags small"><li>Chatbot</li><li>Chemical safety</li></ul>
+          <ul class="tags small"><li>PaddleOCR</li><li>Florence-2</li></ul>
         </article>
       </div>
 
@@ -241,36 +204,9 @@
           <p>Kaggle speech-recognition challenge for the low-resource Uyghur language. Finished 13th and won a silver medal.</p>
           <ul class="tags small"><li>Speech</li><li>Kaggle</li><li>Silver</li></ul>
         </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/sentiment_prediction" rel="noopener">sentiment_prediction</a></h3>
-          <p>Movie-review sentiment classification. F1 of 0.8, top 400 of 950+ participants.</p>
-          <ul class="tags small"><li>NLP</li><li>Kaggle</li></ul>
-        </article>
       </div>
 
-      <h3 class="group">Earlier: full-stack &amp; computer vision</h3>
-      <div class="cards">
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/Stall_Vision" rel="noopener">Stall Vision</a></h3>
-          <p>Video analytics for stores and stalls using YOLOv5 and DeepSORT, served through Streamlit. Inspired by Amazon Rekognition.</p>
-          <ul class="tags small"><li>YOLOv5</li><li>DeepSORT</li><li>Streamlit</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/Odoo" rel="noopener">SynergySphere</a></h3>
-          <p>Team collaboration platform with JWT auth, projects, task assignment and status tracking.</p>
-          <ul class="tags small"><li>Node.js</li><li>JavaScript</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778/mapping-terrorism" rel="noopener">Mapping Terrorism</a></h3>
-          <p>Streamlit app that scrapes SATP data and visualises yearly fatalities across South Asia.</p>
-          <ul class="tags small"><li>Scraping</li><li>Streamlit</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/mehtashish778?tab=repositories" rel="noopener">More on GitHub</a></h3>
-          <p>FastAPI services, grocery and order apps, GIS experiments and more.</p>
-          <ul class="tags small"><li>FastAPI</li><li>Python</li></ul>
-        </article>
-      </div>
+      <p class="note">More repositories are on <a href="https://github.com/mehtashish778?tab=repositories" rel="noopener">GitHub</a>.</p>
 
     </div>
   </section>
@@ -282,13 +218,13 @@
         <div class="panel">
           <h3>AI &amp; research</h3>
           <ul class="tags" style="margin:0">
-            <li>Medical imaging (CT, MR)</li><li>Vision-language models</li><li>3D segmentation</li><li>Grounding</li><li>Reinforcement learning (GRPO)</li><li>Parameter-efficient tuning</li><li>Agentic AI</li><li>RAG</li><li>Knowledge graphs</li><li>Evaluation</li>
+            <li>Vision-language models</li><li>Pre-training</li><li>SFT</li><li>RL fine-tuning</li><li>Medical imaging (CT, MR)</li><li>3D segmentation</li><li>Grounding</li><li>Parameter-efficient tuning</li><li>Data curation</li><li>Evaluation</li>
           </ul>
         </div>
         <div class="panel">
           <h3>Engineering</h3>
           <ul class="tags" style="margin:0">
-            <li>Python</li><li>PyTorch</li><li>vLLM</li><li>Slurm / HPC</li><li>WebRTC voice</li><li>LangGraph</li><li>FastAPI</li><li>AWS</li><li>TypeScript</li><li>LaTeX</li>
+            <li>Python</li><li>PyTorch</li><li>Slurm / HPC</li><li>Distributed training</li><li>vLLM</li><li>FastAPI</li><li>AWS</li><li>Air-gapped deployment</li><li>LaTeX</li>
           </ul>
         </div>
       </div>
@@ -314,7 +250,7 @@
   <section class="win sand" id="contact" aria-labelledby="contact-title">
     <div class="titlebar"><span class="box"></span><span class="stripes"></span><h2 id="contact-title">Contact</h2><span class="stripes"></span></div>
     <div class="body">
-      <p>Open to research collaborations and conversations about medical AI, multimodal models and trustworthy clinical agents.</p>
+      <p>Open to research collaborations and conversations about medical VLMs, large-scale training and trustworthy clinical AI.</p>
       <dl class="contact" style="margin-top:14px">
         <dt>Email</dt><dd><a href="mailto:ashishmehta.per@gmail.com">ashishmehta.per@gmail.com</a></dd>
         <dt>GitHub</dt><dd><a href="https://github.com/mehtashish778" rel="noopener">github.com/mehtashish778</a></dd>
